@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,549 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BreakoutSprites_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 900
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445e1f8104cc4b943bb2302ff839a06c
+      internalID: 559515428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 837
+        width: 755
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4fae5aeac81324ea2e03128b9f60f6
+      internalID: 306786067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 799
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ba8263401a9c24886cba2f2bb1e877
+      internalID: -495701448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_3
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 746
+        width: 323
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31e5a80fb852d048a151464fe624e0d
+      internalID: 1559695708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_4
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 688
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607bdf1de3da3a1459c591899ed38dad
+      internalID: 1742983816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_5
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 724
+        width: 106
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725928f8bc60a9341b2203d9502a9873
+      internalID: 56598472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_6
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 15
+        width: 25
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685bd1c5b76cd9649bae8422594de27a
+      internalID: 631454973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_7
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 696
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75d4bbb9648e764ea57d2883e8447f2
+      internalID: -1578488145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_8
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 592
+        width: 325
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41368b10dc174aa4387e2cdf660ddb92
+      internalID: -1499888424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_9
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 595
+        width: 176
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15fbe5efd28a5f4baaaf33a31203901
+      internalID: -183240695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_10
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 590
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df9a20d883168c40a6b0a0c5c23d13a
+      internalID: -407639145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_11
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 590
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2263c19a64b71ef4c826d07d1ce53dbc
+      internalID: -933693823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 429
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedc67a7819dfb44b9a7fc16e870957a
+      internalID: -268177510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_13
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 429
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817ed018d56caa142babc8acd19f34d3
+      internalID: -1074269078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_14
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 429
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77962706ec9f5f4696e3781149ae02d
+      internalID: 331345184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_15
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 269
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb24f6df4eaf1c4b9e31b755269aa01
+      internalID: 493304208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_16
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 269
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6150f4b78f9ac439d862a37ef15ed2
+      internalID: 501739203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_17
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 269
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21c7abfdd21b2641a53cb3c959031da
+      internalID: 1029487237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 105
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d18a92fc50f277458687ff7794928ea
+      internalID: -1772277486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_19
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 105
+        width: 283
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181224d7f4a31214a82063736c3977e0
+      internalID: -956194218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_20
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 187
+        width: 223
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ce277a4c57b32429f2f7cbcb7098ba
+      internalID: -1644651321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_21
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 110
+        width: 223
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b669d0a91448e9146a7a0d344d97529f
+      internalID: 771852644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_22
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 71
+        width: 613
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cc5812cdf826e448490ba55e8396ad
+      internalID: -1944889987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BreakoutSprites_23
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 25
+        width: 613
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dd2f0287d05b945898ab0a1b1ac2ef
+      internalID: 336778100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +629,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BreakoutSprites_11: -933693823
+      BreakoutSprites_20: -1644651321
+      BreakoutSprites_2: -495701448
+      BreakoutSprites_13: -1074269078
+      BreakoutSprites_7: -1578488145
+      BreakoutSprites_0: 559515428
+      BreakoutSprites_10: -407639145
+      BreakoutSprites_12: -268177510
+      BreakoutSprites_15: 493304208
+      BreakoutSprites_9: -183240695
+      BreakoutSprites_22: -1944889987
+      BreakoutSprites_19: -956194218
+      BreakoutSprites_14: 331345184
+      BreakoutSprites_21: 771852644
+      BreakoutSprites_8: -1499888424
+      BreakoutSprites_3: 1559695708
+      BreakoutSprites_16: 501739203
+      BreakoutSprites_5: 56598472
+      BreakoutSprites_18: -1772277486
+      BreakoutSprites_17: 1029487237
+      BreakoutSprites_23: 336778100
+      BreakoutSprites_4: 1742983816
+      BreakoutSprites_1: 306786067
+      BreakoutSprites_6: 631454973
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -14,14 +14,14 @@ public class Brick : MonoBehaviour
 
         gameManager = FindObjectOfType<GameManager>();
         if(gameManager != null){
-            gameManager.BricksOnLevel++;
+            gameManager.BricksOnLevel++; // Add all the brick object instances while the scene loads
         }
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(gameManager != null){
-            gameManager.BricksOnLevel--;
+            gameManager.BricksOnLevel--; // Delete this game object and reduce the total amount of bricks once it has collided with the ball
         }
         Destroy(gameObject);
     }

@@ -6,6 +6,8 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigidbody2D;
     [SerializeField] float ballSpeed = 5;
+    [SerializeField] AudioController audioController;
+    [SerializeField] AudioClip bounceSfx;
     Vector2 moveDirection;
     Vector2 currentVelocity;
     GameManager gameManager;
@@ -42,6 +44,7 @@ public class Ball : MonoBehaviour
         // Change direction and adjust velocity once it hits an object with collision
         moveDirection = Vector2.Reflect(currentVelocity, collision.GetContact(0).normal);
         rigidbody2D.velocity = moveDirection;
+        audioController.PlaySfx(bounceSfx); // Play bounce audioclip
 
         // If the ball collides with the bottom limit of the scene...
         if(collision.transform.CompareTag("BottomLimit")){

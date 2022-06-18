@@ -6,6 +6,7 @@ public class Brick : MonoBehaviour
 {
     // GameObject gameManagerObj;
     GameManager gameManager;
+    [SerializeField] GameObject explosionPrefab;
     
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Brick : MonoBehaviour
         if(gameManager != null){
             gameManager.BricksOnLevel--; // Delete this game object and reduce the total amount of bricks once it has collided with the ball
         }
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Instantiate explotion prefab in the block position and rotation
         Destroy(gameObject);
     }
 }

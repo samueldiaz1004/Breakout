@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
             if(bricksOnLevel == 0){
                 Destroy(GameObject.Find("Ball"));
                 uiController.ActivateWinnerScreen();
-                gameTime = Time.time - gameTime; // Calculate time the game lasted
-                print("game time: "+gameTime);
+                gameTime = Time.time - gameTime; // Calculate total time the game lasted
+                uiController.UpdateTime(string.Format("{0:N2}", gameTime)); // Show it on the screen
             }
         }
     }
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         get => playerLives;
         set {
             playerLives = value;
+            uiController.UpdateLives(playerLives); // Update current player lives in the UI
             // If the player lost all its lives
             if(playerLives == 0){
                 uiController.ActivateLoseScreen();

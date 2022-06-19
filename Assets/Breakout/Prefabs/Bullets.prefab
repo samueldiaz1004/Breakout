@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 773572398369726324}
   - component: {fileID: 3581229899280204394}
   - component: {fileID: 5145138210380721598}
+  - component: {fileID: 7519928802896467127}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039c293f9a88f3b46a451fe9fb320907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  audioClip: {fileID: 8300000, guid: a9622530e2dd96542911a1fd1b699807, type: 3}
 --- !u!114 &3581229899280204394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca379ed962d134145844843a901e59b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7519928802896467127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773572398369726319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de50e731986cc0409f2a4cb6395065b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
    [SerializeField] UIController uiController;
    [SerializeField] int playerLives = 3;
    int bricksOnLevel;
@@ -13,6 +14,14 @@ public class GameManager : MonoBehaviour
    public bool powerUpOnScene;
    public bool poweUpIsActive;
    
+   // Create game manager before start so other objects can reference it
+   // Transform game manager into a singleton
+   private void Awake()
+   {
+        if(Instance == null){
+            Instance = this;
+        }
+   }
 
    // Access <bricksOnLevel> private variable
    public int BricksOnLevel{
@@ -49,6 +58,14 @@ public class GameManager : MonoBehaviour
         set {
             gameStarted = value;
             gameTime = Time.time; // Set current time
+        }
+    }
+
+    // Function to quit game with esc key
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
         }
     }
 

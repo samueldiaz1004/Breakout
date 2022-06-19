@@ -5,12 +5,12 @@ using UnityEngine;
 public class RemovePowerUpFromScene : MonoBehaviour
 {
     bool isQuitting;
-    GameManager gameManager;
+    // GameManager gameManager;
 
-    private void Start()
-    {
-        gameManager = FindObjectOfType<GameManager>();
-    }
+    // private void Start()
+    // {
+    //     gameManager = FindObjectOfType<GameManager>();
+    // }
     
     // Function to avoid Destroy() error when quitting the game
     private void OnApplicationQuit()
@@ -24,9 +24,9 @@ public class RemovePowerUpFromScene : MonoBehaviour
             return;
         }
 
-        if(gameManager != null){
-            if(gameManager.powerUpOnScene){
-                gameManager.powerUpOnScene = false; // Update variable status so other power-ups can spawn
+        if(GameManager.Instance != null){
+            if(GameManager.Instance.powerUpOnScene){
+                GameManager.Instance.powerUpOnScene = false; // Update variable status so other power-ups can spawn
             }
         }
     }

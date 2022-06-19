@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1784800342667842032}
   - component: {fileID: 278627035444230769}
   - component: {fileID: -7245135805173882442}
+  - component: {fileID: -393063000025422422}
   m_Layer: 0
   m_Name: BigSizePaddle
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936683a35eb86e14a978a00142d8c3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  audioClip: {fileID: 8300000, guid: a9622530e2dd96542911a1fd1b699807, type: 3}
 --- !u!212 &1784800342667842032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -174,3 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca379ed962d134145844843a901e59b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-393063000025422422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784800342667842033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de50e731986cc0409f2a4cb6395065b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     [SerializeField] TrailRenderer trailRenderer;
     Vector2 moveDirection;
     Vector2 currentVelocity;
-    GameManager gameManager;
+    // GameManager gameManager;
     Transform paddle;
     bool superBall; 
     
@@ -31,7 +31,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        // gameManager = FindObjectOfType<GameManager>();
         // rigidbody2D = GetComponent<Rigidbody2D>();
         // rigidbody2D.velocity = Vector2.up * ballSpeed;
         paddle = transform.parent; // Add ball object as a son of the paddle object to follow x-axis movement
@@ -40,12 +40,12 @@ public class Ball : MonoBehaviour
     private void Update()
     {
         // Throw ball with right mouse click and if it is not son of paddle so it only launches it once
-        if(Input.GetMouseButtonDown(0) && !gameManager.ballIsOnPlay){
+        if(Input.GetMouseButtonDown(0) && !GameManager.Instance.ballIsOnPlay){
             rigidbody2D.velocity = Vector2.up * ballSpeed;
             transform.parent = null; // Remove paddle as a parent so it does not follow it
-            gameManager.ballIsOnPlay = true;
-            if(!gameManager.GameStarted){
-                gameManager.GameStarted = true; // Start timer
+            GameManager.Instance.ballIsOnPlay = true;
+            if(!GameManager.Instance.GameStarted){
+                GameManager.Instance.GameStarted = true; // Start timer
             }
         }
     }
@@ -75,13 +75,13 @@ public class Ball : MonoBehaviour
 
         // If the ball collides with the bottom limit of the scene...
         if(collision.transform.CompareTag("BottomLimit")){
-            if(gameManager != null){
-                gameManager.PlayerLives--; // Reduce player lives
-                if(gameManager.PlayerLives > 0){
+            if(GameManager.Instance != null){
+                GameManager.Instance.PlayerLives--; // Reduce player lives
+                if(GameManager.Instance.PlayerLives > 0){
                     rigidbody2D.velocity = Vector2.zero;
                     transform.SetParent(paddle); // Return ball as a son of paddle
                     transform.localPosition = new Vector2(0,0.7f); // Set ofset so it is a little bit higher than the paddle
-                    gameManager.ballIsOnPlay = false;
+                    GameManager.Instance.ballIsOnPlay = false;
                 }
             }
         }
@@ -93,7 +93,7 @@ public class Ball : MonoBehaviour
         trailRenderer.enabled = true; // Activate trail render effect while the ball has the power-up
         yield return new WaitForSeconds(SuperBallTime);
         trailRenderer.enabled = false;
-        gameManager.poweUpIsActive = false; // Update variable status so other power-ups can spawn
+        GameManager.Instance.poweUpIsActive = false; // Update variable status so other power-ups can spawn
         superBall = false;
     }
 }

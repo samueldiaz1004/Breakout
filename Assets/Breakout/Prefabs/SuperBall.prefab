@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5877150872266347529}
   - component: {fileID: 6543601634016993879}
   - component: {fileID: 4386205925227941699}
+  - component: {fileID: 4057124003406229800}
   m_Layer: 0
   m_Name: SuperBall
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a01ba8fc3f4066478c6daa68ee3d59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  audioClip: {fileID: 8300000, guid: a9622530e2dd96542911a1fd1b699807, type: 3}
 --- !u!114 &6543601634016993879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca379ed962d134145844843a901e59b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4057124003406229800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877150872266347530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de50e731986cc0409f2a4cb6395065b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

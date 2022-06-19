@@ -7,7 +7,7 @@ public class Paddle : MonoBehaviour
     [SerializeField] float paddleSpeed = 5;
     [SerializeField] float xLimit = 11f; 
     [SerializeField] float bigSizeTime = 10;
-    [SerializeField] GameManager gameManager;
+    // [SerializeField] GameManager gameManager;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float fireRate = 1;
     [SerializeField] float bulletsTime = 10;
@@ -41,7 +41,7 @@ public class Paddle : MonoBehaviour
     public void IncreaseSize()
     {
         // Only activate the power-up while the ball still exists
-        if(gameManager.ballIsOnPlay){
+        if(GameManager.Instance.ballIsOnPlay){
             Vector3 newSize = transform.localScale;
             newSize.x = 1.2f;
             transform.localScale = newSize;
@@ -54,7 +54,7 @@ public class Paddle : MonoBehaviour
     {
         yield return new WaitForSeconds(bigSizeTime);
         transform.localScale = new Vector3(1,1,1); // Reset paddle dimensions
-        gameManager.poweUpIsActive = false; // Update variable status so other power-ups can spawn
+        GameManager.Instance.poweUpIsActive = false; // Update variable status so other power-ups can spawn
     }
 
     // This coroutine will continue to execute its code while the condition is true
@@ -69,6 +69,6 @@ public class Paddle : MonoBehaviour
     void ResetBulletsActive()
     {
         bulletsActive = false;
-        gameManager.poweUpIsActive = false; // Update variable status so other power-ups can spawn
+        GameManager.Instance.poweUpIsActive = false; // Update variable status so other power-ups can spawn
     }
 }

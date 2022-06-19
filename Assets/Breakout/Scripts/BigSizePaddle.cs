@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class BigSizePaddle : MonoBehaviour
 {
-    [SerializeField] float speed = 1;
-    void Update()
-    {
-        transform.Translate(Vector2.down * Time.deltaTime * speed); // Simulate the item constantly falling
-    }
+    [SerializeField] AudioClip audioClip;
 
     private void OnTriggerEnter2D(Collider2D collison)
     {
         if(collison.transform.CompareTag("Player")){
             Paddle paddle = FindObjectOfType<Paddle>();
+            AudioController audioController = FindObjectOfType<AudioController>();
             if(paddle != null){
+                audioController.PlaySfx(audioClip);
                 paddle.IncreaseSize(); // Activate power-up
             }
-            GameManager gameManager = FindObjectOfType<GameManager>();
-            if(gameManager != null){
-                gameManager.poweUpIsActive = true; // // Update variable status so no more power-ups spawn
+            // GameManager gameManager = FindObjectOfType<GameManager>();
+            if(GameManager.Instance != null){
+                GameManager.Instance.poweUpIsActive = true; // // Update variable status so no more power-ups spawn
             }
             Destroy(gameObject);
         }

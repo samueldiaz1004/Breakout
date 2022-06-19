@@ -25,14 +25,4 @@ public class SuperBall : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnDestroy()
-    {
-        GameManager gameManager = FindObjectOfType<GameManager>();
-        if(gameManager != null){
-            if(gameManager.powerUpOnScene){
-                gameManager.powerUpOnScene = false; // Update variable status so other power-ups can spawn
-            }
-        }
-    }
 }

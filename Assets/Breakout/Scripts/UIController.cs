@@ -13,6 +13,10 @@ public class UIController : MonoBehaviour
     [SerializeField] AudioController audioController;
     [SerializeField] AudioClip buttonPressedSfx;
     [SerializeField] AudioClip loseLifeSfx;
+    [SerializeField] GameObject tryAgainButtonLs;
+    [SerializeField] GameObject MainMenuButtonLs;
+    [SerializeField] GameObject tryAgainButtonWn;
+    [SerializeField] GameObject MainMenuButtonWn;
 
     //////////////////////////////////////////////////
     /*Functions to change scene (used with a button)*/
@@ -28,17 +32,29 @@ public class UIController : MonoBehaviour
         winnerScreen.SetActive(true);
     }
 
-    public void TryAgain()
+    void TryAgain()
     {
-        audioController.PlaySfx(buttonPressedSfx);
         SceneManager.LoadScene("Game");
     }
 
-    public void MainMenu()
+    void MainMenu()
     {
-        audioController.PlaySfx(buttonPressedSfx);
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadSceneWithDelay(string functionName)
+    {
+        // Hide btns so user can only click it once
+        tryAgainButtonLs.SetActive(false);
+        MainMenuButtonLs.SetActive(false);
+        tryAgainButtonWn.SetActive(false);
+        MainMenuButtonWn.SetActive(false);
+
+        audioController.PlaySfx(buttonPressedSfx); // Play sfx
+
+        Invoke(functionName, 1); // Load next scene with a delay so the audio has enough time to play
+    }
+
     //////////////////////////////////////////////////
 
     // Only show the player lives in the active UI heart containers

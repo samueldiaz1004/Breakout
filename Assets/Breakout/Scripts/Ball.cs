@@ -9,11 +9,14 @@ public class Ball : MonoBehaviour
     [SerializeField] float SuperBallTime = 10;
     [SerializeField] AudioController audioController;
     [SerializeField] AudioClip bounceSfx;
+    [SerializeField] float yMinSpeed = 2;
+    [SerializeField] TrailRenderer trailRenderer;
     Vector2 moveDirection;
     Vector2 currentVelocity;
     GameManager gameManager;
     Transform paddle;
     bool superBall; 
+    
 
     // Access <superBall> private variable and ennable power-up
     public bool SuperBall{
@@ -62,6 +65,11 @@ public class Ball : MonoBehaviour
 
         // Change direction and adjust velocity once it hits an object with collision
         moveDirection = Vector2.Reflect(currentVelocity, collision.GetContact(0).normal);
+
+        if(Mathf.Abs(moveDirection.y) < yMinSpeed){
+            moveDirection.y = yMinSpeed * Mathf.Sign(moveDirection.y); // Improves gameplay by keeping a minimum speed while bouncing off other objects
+        }
+
         rigidbody2D.velocity = moveDirection;
         audioController.PlaySfx(bounceSfx); // Play bounce audioclip
 
@@ -82,7 +90,9 @@ public class Ball : MonoBehaviour
     // This coroutine executes the code inside the function after a specified amount of time
     IEnumerator ResetSuperBall()
     {
+        trailRenderer.enabled = true; // Activate trail render effect while the ball has the power-up
         yield return new WaitForSeconds(SuperBallTime);
+        trailRenderer.enabled = false;
         gameManager.poweUpIsActive = false; // Update variable status so other power-ups can spawn
         superBall = false;
     }

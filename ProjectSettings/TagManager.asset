@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BottomLimit
   - Brick
+  - TopLimit
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ball
+  - Bullet
   - 
   - 
   - 

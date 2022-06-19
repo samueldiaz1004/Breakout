@@ -9,6 +9,7 @@ public class Brick : MonoBehaviour
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] GameObject[] powerUpsPrefabs;
     [SerializeField] int powerUpChance = 20;
+    bool isQuitting;
     
     private void Start()
     {
@@ -30,9 +31,19 @@ public class Brick : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // Function to avoid Destroy() error when quitting the game
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     // Will execute following code when this instance of the game object is destroyed
     private void OnDestroy()
     {
+        if(isQuitting){
+            return;
+        }
+        
         // Don't instantiate a new power-up if another one is on the scene
         if(!gameManager.powerUpOnScene){
             int possibility = Random.Range(0,100); // Calculate the posibility of a power-up dropping from this destroyed brick

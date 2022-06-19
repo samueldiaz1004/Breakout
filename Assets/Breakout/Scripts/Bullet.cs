@@ -11,11 +11,10 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * Time.deltaTime * speed); // Simulate the bullet constantly going up
     }
 
-    private void OnTriggerEnter2D(Collider2D collison)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // When a bullet enters in contact with brick, destroy the brick and itself
-        if(collison.transform.CompareTag("Brick")){
-            Destroy(collison.gameObject);
+        // When a bullet enters in contact with brick or the top limit, it will destroy itself
+        if(collision.transform.CompareTag("Brick") || collision.transform.CompareTag("TopLimit")){
             Destroy(gameObject);
         }
     }

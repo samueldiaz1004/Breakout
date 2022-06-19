@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   int bricksOnLevel;
+   [SerializeField] UIController uiController;
    [SerializeField] int playerLives = 3;
+   int bricksOnLevel;
    public bool ballIsOnPlay;
    float gameTime;
    bool gameStarted;
-   [SerializeField] UIController uiController;
+   public bool powerUpOnScene;
+   public bool poweUpIsActive;
+   
 
    // Access <bricksOnLevel> private variable
    public int BricksOnLevel{

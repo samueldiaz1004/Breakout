@@ -6,12 +6,25 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigidbody2D;
     [SerializeField] float ballSpeed = 5;
+    [SerializeField] float SuperBallTime = 10;
     [SerializeField] AudioController audioController;
     [SerializeField] AudioClip bounceSfx;
     Vector2 moveDirection;
     Vector2 currentVelocity;
     GameManager gameManager;
     Transform paddle;
+    bool superBall; 
+
+    // Access <superBall> private variable and ennable power-up
+    public bool SuperBall{
+        get => superBall;
+        set {
+            superBall = value;
+            if(superBall){
+                StartCoroutine(ResetSuperBall());
+            }
+        }
+    }
 
     void Start()
     {
@@ -41,6 +54,12 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Don't bounce off bricks if the super ball power-up is active
+        if(collision.transform.CompareTag("Brick") && SuperBall){
+            rigidbody2D.velocity = currentVelocity; // Keep current velocity
+            return;
+        }
+
         // Change direction and adjust velocity once it hits an object with collision
         moveDirection = Vector2.Reflect(currentVelocity, collision.GetContact(0).normal);
         rigidbody2D.velocity = moveDirection;
@@ -58,5 +77,13 @@ public class Ball : MonoBehaviour
                 }
             }
         }
+    }
+
+    // This coroutine executes the code inside the function after a specified amount of time
+    IEnumerator ResetSuperBall()
+    {
+        yield return new WaitForSeconds(SuperBallTime);
+        gameManager.poweUpIsActive = false; // Update variable status so other power-ups can spawn
+        superBall = false;
     }
 }

@@ -771,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 353928950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4.5, z: 0}
-  m_LocalScale: {x: 2.5, y: 1, z: 1}
+  m_LocalScale: {x: 2.32, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694376233}
@@ -1350,7 +1350,7 @@ GameObject:
   - component: {fileID: 520604450}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1368,7 +1368,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddleSpeed: 8
-  xLimit: 5.8
+  xLimit: 5
+  bigSizeTime: 5
+  gameManager: {fileID: 989551256}
+  bulletPrefab: {fileID: 716516611655107190, guid: b704bdf534ca25e4083a1b35b2d40e23, type: 3}
+  fireRate: 1
+  bulletsTime: 10
+  bulletOffset: {x: 0, y: 0.5, z: 0}
 --- !u!212 &520604448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1506,7 +1512,7 @@ Transform:
   m_GameObject: {fileID: 528695021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 2.5, y: 1, z: 1}
+  m_LocalScale: {x: 2.32, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694376233}
@@ -1857,8 +1863,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558040847}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -7.5, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.4, y: 1, z: 1}
+  m_LocalPosition: {x: -7, y: -0.25, z: 0}
+  m_LocalScale: {x: 1.43, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694376233}
@@ -2151,6 +2157,9 @@ MonoBehaviour:
   - {fileID: 1825980675}
   - {fileID: 335753280}
   - {fileID: 472932601}
+  audioController: {fileID: 532309247}
+  buttonPressedSfx: {fileID: 8300000, guid: bdaa71314c1d7f040810b813e19dfcf1, type: 3}
+  loseLifeSfx: {fileID: 8300000, guid: b3353c9debe18474b8515e1b8d9ab94b, type: 3}
 --- !u!4 &802505893
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,8 +2206,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874642713}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.5, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.4, y: 1, z: 1}
+  m_LocalPosition: {x: 7, y: -0.25, z: 0}
+  m_LocalScale: {x: 1.43, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694376233}
@@ -2316,9 +2325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb5b31997fe6b42823e120727542e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiController: {fileID: 802505892}
   playerLives: 3
   ballIsOnPlay: 0
-  uiController: {fileID: 802505892}
+  powerUpOnScene: 0
+  poweUpIsActive: 0
 --- !u!4 &989551257
 Transform:
   m_ObjectHideFlags: 0
@@ -4629,8 +4640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880877777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: -0.2104, z: 0}
-  m_LocalScale: {x: 10.135412, y: 5.7152534, z: 1}
+  m_LocalPosition: {x: 0.0525, y: -0.2619, z: 0}
+  m_LocalScale: {x: 9.5707, y: 5.785551, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5206,6 +5217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 1972020436}
   ballSpeed: 5
+  SuperBallTime: 10
   audioController: {fileID: 532309247}
   bounceSfx: {fileID: 8300000, guid: c491cf40af733b14083366c0b873d8d6, type: 3}
 --- !u!58 &1972020435

@@ -20,4 +20,9 @@ public class AudioController : MonoBehaviour
         audioSource.clip = clip;
         audioSource.PlayOneShot(clip);
     }
+
+    public void UpdateMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
 }

@@ -7,6 +7,8 @@ public class Brick : MonoBehaviour
     // GameObject gameManagerObj;
     GameManager gameManager;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject[] powerUpsPrefabs;
+    [SerializeField] int powerUpChance = 20;
     
     private void Start()
     {
@@ -26,5 +28,19 @@ public class Brick : MonoBehaviour
         }
         Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Instantiate explotion prefab in the block position and rotation
         Destroy(gameObject);
+    }
+
+    // Will execute following code when this instance of the game object is destroyed
+    private void OnDestroy()
+    {
+        // Don't instantiate a new power-up if another one is on the scene
+        if(!gameManager.powerUpOnScene){
+            int possibility = Random.Range(0,100); // Calculate the posibility of a power-up dropping from this destroyed brick
+            if(possibility < powerUpChance){
+                int randomPowerUp = Random.Range(0,powerUpsPrefabs.Length);
+                Instantiate(powerUpsPrefabs[randomPowerUp], transform.position, Quaternion.identity); // Instantiate a random power-up
+                gameManager.powerUpOnScene = true; // Update variable status
+            }
+        }
     }
 }

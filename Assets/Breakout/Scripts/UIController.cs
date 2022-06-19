@@ -10,26 +10,33 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject winnerScreen;
     [SerializeField] Text gameTimeUI;
     [SerializeField] GameObject[] hearts;
-    
+    [SerializeField] AudioController audioController;
+    [SerializeField] AudioClip buttonPressedSfx;
+    [SerializeField] AudioClip loseLifeSfx;
+
     //////////////////////////////////////////////////
     /*Functions to change scene (used with a button)*/
     public void ActivateLoseScreen()
     {
+        audioController.UpdateMusicVolume(0.5f); // Lower background music volume
         loseScreen.SetActive(true);
     }
 
     public void ActivateWinnerScreen()
     {
+        audioController.UpdateMusicVolume(0.5f); // Lower background music volume
         winnerScreen.SetActive(true);
     }
 
     public void TryAgain()
     {
+        audioController.PlaySfx(buttonPressedSfx);
         SceneManager.LoadScene("Game");
     }
 
     public void MainMenu()
     {
+        audioController.PlaySfx(buttonPressedSfx);
         SceneManager.LoadScene("MainMenu");
     }
     //////////////////////////////////////////////////
@@ -42,6 +49,7 @@ public class UIController : MonoBehaviour
                 hearts[i].SetActive(false);
             }
         }
+        audioController.PlaySfx(loseLifeSfx);
     }
 
     public void UpdateTime(string text)

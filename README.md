@@ -10,7 +10,7 @@
 <div>
   <ul>
     <li>Use the "A" and "D" keys to move the paddle horizontally.</li>
-    <li>Shoot the ball with a mouse right click.</li>
+    <li>Shoot the ball with a mouse left click.</li>
     <li>Avoid dropping the ball and losing your three lives, then is game over.</li>
     <li>Some bricks may drop items, catch them to gain a power up.</li>
     <li>Destroy all the bricks as fast as you can and complete the level.</li>
